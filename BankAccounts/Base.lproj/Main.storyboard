@@ -17,34 +17,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ISi-oq-VPm">
-                                <rect key="frame" x="0.0" y="44" width="414" height="250"/>
-                                <color key="backgroundColor" red="1" green="0.74757934172413643" blue="0.66716235705473326" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="always" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ISi-oq-VPm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="180"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="nfi-eC-jjw"/>
+                                    <constraint firstAttribute="height" constant="180" id="nfi-eC-jjw"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cuc-dt-CbT">
-                                    <size key="itemSize" width="322" height="172"/>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="20" minimumInteritemSpacing="15" id="vdm-E4-3pa">
+                                    <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="20" maxX="16" maxY="20"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hl2-K2-XN7">
-                                        <rect key="frame" x="46" y="0.0" width="322" height="172"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BankCardCell" id="hl2-K2-XN7" customClass="BankCardCell" customModule="BankAccounts" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="4" width="322" height="172"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hpI-i1-5c7">
                                             <rect key="frame" x="0.0" y="0.0" width="322" height="172"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbR-mq-IHM">
+                                                    <rect key="frame" x="8" y="16" width="306" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sY9-P1-hVa">
+                                                    <rect key="frame" x="8" y="87" width="306" height="77"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="8fR-d7-bgn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="sY9-P1-hVa" secondAttribute="bottom" constant="8" id="03s-FG-X9N"/>
+                                                <constraint firstItem="sY9-P1-hVa" firstAttribute="leading" secondItem="hpI-i1-5c7" secondAttribute="leading" constant="8" id="Eoi-oG-Z7p"/>
+                                                <constraint firstAttribute="trailing" secondItem="IbR-mq-IHM" secondAttribute="trailing" constant="8" id="FUt-Oi-MMx"/>
+                                                <constraint firstItem="IbR-mq-IHM" firstAttribute="top" secondItem="hpI-i1-5c7" secondAttribute="top" constant="16" id="eX0-ZI-OER"/>
+                                                <constraint firstAttribute="trailing" secondItem="sY9-P1-hVa" secondAttribute="trailing" constant="8" id="iSY-ga-CPO"/>
+                                                <constraint firstItem="sY9-P1-hVa" firstAttribute="top" secondItem="IbR-mq-IHM" secondAttribute="bottom" constant="50" id="lrw-6H-7Cs"/>
+                                                <constraint firstItem="IbR-mq-IHM" firstAttribute="leading" secondItem="hpI-i1-5c7" secondAttribute="leading" constant="8" id="zgP-z7-cgA"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                         <size key="customSize" width="322" height="172"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="balanceLabel" destination="IbR-mq-IHM" id="mei-bB-w6F"/>
+                                            <outlet property="ownerLabel" destination="sY9-P1-hVa" id="Ghk-Gp-2Pp"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VfO-ac-Rs5"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.74757934169999996" blue="0.66716235710000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ISi-oq-VPm" firstAttribute="trailing" secondItem="VfO-ac-Rs5" secondAttribute="trailing" id="BG6-pP-ya7"/>
                             <constraint firstItem="ISi-oq-VPm" firstAttribute="leading" secondItem="VfO-ac-Rs5" secondAttribute="leading" id="QNV-3F-sgi"/>
@@ -58,13 +94,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYe-fH-ZHT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-713" y="96"/>
+            <point key="canvasLocation" x="-713.04347826086962" y="95.758928571428569"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

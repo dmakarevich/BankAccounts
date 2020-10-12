@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8449AFC22533BA3300927D2E /* BankCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449AFC02533BA3300927D2E /* BankCardCell.swift */; };
 		84935EF525307B10004334B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84935EF425307B10004334B4 /* AppDelegate.swift */; };
 		84935EF925307B10004334B4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84935EF825307B10004334B4 /* MainViewController.swift */; };
 		84935EFC25307B10004334B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84935EFA25307B10004334B4 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8449AFC02533BA3300927D2E /* BankCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardCell.swift; sourceTree = "<group>"; };
 		84935EF125307B10004334B4 /* BankAccounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankAccounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84935EF425307B10004334B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84935EF825307B10004334B4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8449AFB82533B00600927D2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8449AFC02533BA3300927D2E /* BankCardCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		84935EE825307B10004334B4 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +64,7 @@
 		84935EF325307B10004334B4 /* BankAccounts */ = {
 			isa = PBXGroup;
 			children = (
+				8449AFB82533B00600927D2E /* Views */,
 				84935EF425307B10004334B4 /* AppDelegate.swift */,
 				84935EF825307B10004334B4 /* MainViewController.swift */,
 				84935EFA25307B10004334B4 /* Main.storyboard */,
@@ -136,6 +147,7 @@
 			files = (
 				84935EF925307B10004334B4 /* MainViewController.swift in Sources */,
 				84935EF525307B10004334B4 /* AppDelegate.swift in Sources */,
+				8449AFC22533BA3300927D2E /* BankCardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
