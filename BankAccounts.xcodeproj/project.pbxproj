@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		843D32B025374C8700CB6739 /* Billing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D32AF25374C8600CB6739 /* Billing.swift */; };
 		844713AB2539ECCD00A5BEFF /* NetworkHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844713AA2539ECCD00A5BEFF /* NetworkHelpers.swift */; };
-		84477BA92539DBD3007120CC /* AddBankCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84477BA82539DBD3007120CC /* AddBankCardCell.swift */; };
+		84477BA92539DBD3007120CC /* AddBillingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84477BA82539DBD3007120CC /* AddBillingCell.swift */; };
 		844882032534FBFB003711D7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844882022534FBFB003711D7 /* NetworkManager.swift */; };
-		8449AFC22533BA3300927D2E /* BankCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449AFC02533BA3300927D2E /* BankCardCell.swift */; };
+		8449AFC22533BA3300927D2E /* BillingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449AFC02533BA3300927D2E /* BillingCell.swift */; };
 		84935EF525307B10004334B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84935EF425307B10004334B4 /* AppDelegate.swift */; };
 		84935EF925307B10004334B4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84935EF825307B10004334B4 /* MainViewController.swift */; };
 		84935EFC25307B10004334B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84935EFA25307B10004334B4 /* Main.storyboard */; };
@@ -22,9 +22,9 @@
 /* Begin PBXFileReference section */
 		843D32AF25374C8600CB6739 /* Billing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billing.swift; sourceTree = "<group>"; };
 		844713AA2539ECCD00A5BEFF /* NetworkHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelpers.swift; sourceTree = "<group>"; };
-		84477BA82539DBD3007120CC /* AddBankCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBankCardCell.swift; sourceTree = "<group>"; };
+		84477BA82539DBD3007120CC /* AddBillingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBillingCell.swift; sourceTree = "<group>"; };
 		844882022534FBFB003711D7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		8449AFC02533BA3300927D2E /* BankCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardCell.swift; sourceTree = "<group>"; };
+		8449AFC02533BA3300927D2E /* BillingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCell.swift; sourceTree = "<group>"; };
 		84935EF125307B10004334B4 /* BankAccounts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankAccounts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84935EF425307B10004334B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84935EF825307B10004334B4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -65,8 +65,8 @@
 		8449AFB82533B00600927D2E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				8449AFC02533BA3300927D2E /* BankCardCell.swift */,
-				84477BA82539DBD3007120CC /* AddBankCardCell.swift */,
+				8449AFC02533BA3300927D2E /* BillingCell.swift */,
+				84477BA82539DBD3007120CC /* AddBillingCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -176,8 +176,8 @@
 				84935EF925307B10004334B4 /* MainViewController.swift in Sources */,
 				844882032534FBFB003711D7 /* NetworkManager.swift in Sources */,
 				84935EF525307B10004334B4 /* AppDelegate.swift in Sources */,
-				84477BA92539DBD3007120CC /* AddBankCardCell.swift in Sources */,
-				8449AFC22533BA3300927D2E /* BankCardCell.swift in Sources */,
+				84477BA92539DBD3007120CC /* AddBillingCell.swift in Sources */,
+				8449AFC22533BA3300927D2E /* BillingCell.swift in Sources */,
 				844713AB2539ECCD00A5BEFF /* NetworkHelpers.swift in Sources */,
 				843D32B025374C8700CB6739 /* Billing.swift in Sources */,
 			);

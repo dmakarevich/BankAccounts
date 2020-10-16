@@ -74,12 +74,12 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == BillingSections.addBilling.rawValue {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AddBankCardCell.reuseIdentifier,
-                                                          for: indexPath) as? AddBankCardCell ?? AddBankCardCell()
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AddBillingCell.reuseIdentifier,
+                                                          for: indexPath) as? AddBillingCell ?? AddBillingCell()
             return cell
         } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BankCardCell.reuseIdentifier,
-                                                          for: indexPath) as? BankCardCell ?? BankCardCell()
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BillingCell.reuseIdentifier,
+                                                          for: indexPath) as? BillingCell ?? BillingCell()
             let billing = self.billings[indexPath.row]
             cell.set(balance: billing.balance, owner: billing.owner)
 
