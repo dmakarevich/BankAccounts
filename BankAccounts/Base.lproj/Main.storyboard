@@ -32,7 +32,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BankCardCell" id="hl2-K2-XN7" customClass="BankCardCell" customModule="BankAccounts" customModuleProvider="target">
-                                        <rect key="frame" x="16" y="4" width="322" height="172"/>
+                                        <rect key="frame" x="31" y="20" width="322" height="172"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hpI-i1-5c7">
                                             <rect key="frame" x="0.0" y="0.0" width="322" height="172"/>
@@ -76,6 +76,35 @@
                                             <outlet property="ownerLabel" destination="sY9-P1-hVa" id="Ghk-Gp-2Pp"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddBankCardCell" id="1Dm-Cn-rxQ" customClass="AddBankCardCell" customModule="BankAccounts" customModuleProvider="target">
+                                        <rect key="frame" x="368" y="20" width="243" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uTr-ME-Jpj">
+                                            <rect key="frame" x="0.0" y="0.0" width="243" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AT1-yJ-WuY">
+                                                    <rect key="frame" x="79" y="27.5" width="85" height="85"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="85" id="BfT-8T-yhR"/>
+                                                        <constraint firstAttribute="height" constant="85" id="kfu-8s-rK7"/>
+                                                    </constraints>
+                                                    <state key="normal" image="Add"/>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AT1-yJ-WuY" firstAttribute="centerY" secondItem="uTr-ME-Jpj" secondAttribute="centerY" id="SEg-U9-AyA"/>
+                                                <constraint firstItem="AT1-yJ-WuY" firstAttribute="centerX" secondItem="uTr-ME-Jpj" secondAttribute="centerX" id="tUS-sm-o1B"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <size key="customSize" width="243" height="140"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
@@ -98,6 +127,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Add" width="80" height="80"/>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
