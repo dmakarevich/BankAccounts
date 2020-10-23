@@ -47,7 +47,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sY9-P1-hVa">
                                                     <rect key="frame" x="8" y="87" width="306" height="77"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="8fR-d7-bgn"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="190" id="8fR-d7-bgn"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -83,19 +83,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="243" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AT1-yJ-WuY">
-                                                    <rect key="frame" x="79" y="27.5" width="85" height="85"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add" translatesAutoresizingMaskIntoConstraints="NO" id="7E6-Xe-qPA">
+                                                    <rect key="frame" x="79.5" y="28" width="84" height="84"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="85" id="BfT-8T-yhR"/>
-                                                        <constraint firstAttribute="height" constant="85" id="kfu-8s-rK7"/>
+                                                        <constraint firstAttribute="width" constant="84" id="EG2-XZ-DNx"/>
+                                                        <constraint firstAttribute="height" constant="84" id="QJL-Jg-fbd"/>
                                                     </constraints>
-                                                    <state key="normal" image="Add"/>
-                                                </button>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="AT1-yJ-WuY" firstAttribute="centerY" secondItem="uTr-ME-Jpj" secondAttribute="centerY" id="SEg-U9-AyA"/>
-                                                <constraint firstItem="AT1-yJ-WuY" firstAttribute="centerX" secondItem="uTr-ME-Jpj" secondAttribute="centerX" id="tUS-sm-o1B"/>
+                                                <constraint firstItem="7E6-Xe-qPA" firstAttribute="centerX" secondItem="uTr-ME-Jpj" secondAttribute="centerX" id="Zts-eV-t3N"/>
+                                                <constraint firstItem="7E6-Xe-qPA" firstAttribute="centerY" secondItem="uTr-ME-Jpj" secondAttribute="centerY" id="lM9-hy-Rj4"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                         <size key="customSize" width="243" height="140"/>
@@ -124,6 +128,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYe-fH-ZHT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-713.04347826086962" y="95.758928571428569"/>
+        </scene>
+        <!--Billing Modal View Controller-->
+        <scene sceneID="Ygn-bB-nF0">
+            <objects>
+                <viewController storyboardIdentifier="BillingModalViewController" id="Umi-ug-2FS" customClass="BillingModalViewController" customModule="BankAccounts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="Bni-P2-7M6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kvf-nW-iPb" customClass="BillingView" customModule="BankAccounts" customModuleProvider="target">
+                                <rect key="frame" x="20" y="370" width="374" height="166.5"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D84-PQ-EYb"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kvf-nW-iPb" firstAttribute="leading" secondItem="D84-PQ-EYb" secondAttribute="leading" constant="20" id="1zE-81-Xd4"/>
+                            <constraint firstItem="Kvf-nW-iPb" firstAttribute="centerY" secondItem="D84-PQ-EYb" secondAttribute="centerY" id="Jns-Lw-OjR"/>
+                            <constraint firstItem="Kvf-nW-iPb" firstAttribute="centerX" secondItem="D84-PQ-EYb" secondAttribute="centerX" id="ZUo-LC-dn9"/>
+                            <constraint firstItem="D84-PQ-EYb" firstAttribute="trailing" secondItem="Kvf-nW-iPb" secondAttribute="trailing" constant="20" id="xnp-Nx-oj8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="billingView" destination="Kvf-nW-iPb" id="H3L-le-pVV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2cE-tY-y5t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278.26086956521743" y="95.758928571428569"/>
         </scene>
     </scenes>
     <resources>
