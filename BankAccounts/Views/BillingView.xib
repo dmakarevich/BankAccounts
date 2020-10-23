@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BillingView" customModule="BankAccounts" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="balanceLabel" destination="W1a-S6-2eh" id="aMG-qp-yiL"/>
+                <outlet property="dateLabel" destination="tHh-sd-I0V" id="F1q-Uh-FUZ"/>
+                <outlet property="ownerLabel" destination="qH9-zm-VLG" id="WRQ-0U-kpD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="213"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Owner: Train" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qH9-zm-VLG">
+                    <rect key="frame" x="16" y="137" width="382" height="23"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 December" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tHh-sd-I0V">
+                    <rect key="frame" x="16" y="164" width="382" height="41"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCY-DD-sqM">
+                    <rect key="frame" x="334" y="16" width="64" height="64"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="73X-di-g4A"/>
+                        <constraint firstAttribute="height" constant="64" id="fsm-TZ-g67"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="51"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <imageReference key="image" image="trash.fill" catalog="system" symbolScale="large"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="32"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Balance: 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W1a-S6-2eh">
+                    <rect key="frame" x="16" y="24" width="302" height="23"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemPurpleColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="tHh-sd-I0V" secondAttribute="trailing" constant="16" id="0S6-Dl-beS"/>
+                <constraint firstItem="W1a-S6-2eh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="IDb-Qi-g4x"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="tHh-sd-I0V" secondAttribute="bottom" constant="8" id="IMz-PY-MBD"/>
+                <constraint firstItem="tHh-sd-I0V" firstAttribute="top" secondItem="qH9-zm-VLG" secondAttribute="bottom" constant="4" id="NIl-o1-D1n"/>
+                <constraint firstItem="tHh-sd-I0V" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="VTA-wf-evB"/>
+                <constraint firstItem="lCY-DD-sqM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="VnA-Jj-Kjk"/>
+                <constraint firstItem="W1a-S6-2eh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Zkh-aL-fgk"/>
+                <constraint firstItem="qH9-zm-VLG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="gIO-F3-1LG"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lCY-DD-sqM" secondAttribute="trailing" constant="16" id="owF-xx-eYk"/>
+                <constraint firstItem="lCY-DD-sqM" firstAttribute="leading" secondItem="W1a-S6-2eh" secondAttribute="trailing" constant="16" id="pbd-W9-Yya"/>
+                <constraint firstItem="qH9-zm-VLG" firstAttribute="top" secondItem="W1a-S6-2eh" secondAttribute="bottom" constant="90" id="rQi-Pr-L5L"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qH9-zm-VLG" secondAttribute="trailing" constant="16" id="zU6-t9-4wg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="10"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="140.57971014492756" y="311.04910714285711"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
