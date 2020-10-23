@@ -13,4 +13,12 @@ struct Utility {
 
         return Int(since1970 * 1000)
     }
+
+    static func milisecondsToDateString(from dateInt: Int) -> String {
+        let date = Date(timeIntervalSince1970: TimeInterval(dateInt))
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM"
+
+        return formatter.string(from: date)
+    }
 }
