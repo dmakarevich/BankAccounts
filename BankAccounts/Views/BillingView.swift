@@ -17,6 +17,12 @@ class BillingView: UIView {
     @IBInspectable
     @IBOutlet weak var dateLabel: UILabel!
     
+    func set(by billing: Billing) {
+        self.balanceLabel.text = "Balance: \(billing.balance)"
+        self.ownerLabel.text = "Owner: \(billing.owner)"
+        self.dateLabel.text = Utility.milisecondsToDateString(from: billing.date)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
