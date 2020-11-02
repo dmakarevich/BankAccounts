@@ -10,6 +10,8 @@ import UIKit
 @IBDesignable
 class BillingView: UIView {
     private let selfName = "BillingView"
+    var id: Int?
+    var completionHandler: (() -> ())?
     @IBInspectable
     @IBOutlet weak var balanceLabel: UILabel!
     @IBInspectable
@@ -21,6 +23,7 @@ class BillingView: UIView {
         self.balanceLabel.text = "Balance: \(billing.balance)"
         self.ownerLabel.text = "Owner: \(billing.owner)"
         self.dateLabel.text = Utility.milisecondsToDateString(from: billing.date)
+        self.id = billing.id
     }
     
     override init(frame: CGRect) {
@@ -41,5 +44,26 @@ class BillingView: UIView {
             contentView.frame = self.bounds
             contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         }
+    }
+
+    @IBAction func deleteButtonTapped(_ sender: Any) {
+        guard let id = self.id else {
+            return
+        }
+        self.deleteBiling(by: id)
+    }
+    
+    func deleteBiling(by id: Int) {
+        let success = { [unowned self] (data: Data?) in
+            guard let handler = self.completionHandler else {
+                print("Failed success closure")
+                return
+            }
+            handler()
+        }
+
+        NetworkManager.delete(path: .deleteBiling,
+                              id: id,
+                              withCompletion: success)
     }
 }
