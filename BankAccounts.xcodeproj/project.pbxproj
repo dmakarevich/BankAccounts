@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02747540A59135D5FE9EFAEB /* Pods_BankAccounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16E71E58EC6B9867C73C0114 /* Pods_BankAccounts.framework */; };
 		843D32B025374C8700CB6739 /* Billing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843D32AF25374C8600CB6739 /* Billing.swift */; };
 		844713AB2539ECCD00A5BEFF /* NetworkHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844713AA2539ECCD00A5BEFF /* NetworkHelpers.swift */; };
 		84473481253C82EF0018B440 /* BillingModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84473480253C82EF0018B440 /* BillingModalViewController.swift */; };
@@ -14,6 +15,7 @@
 		844882032534FBFB003711D7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844882022534FBFB003711D7 /* NetworkManager.swift */; };
 		844971E5254ADC0B0094A67F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844971E4254ADC0B0094A67F /* Constants.swift */; };
 		8449AFC22533BA3300927D2E /* BillingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8449AFC02533BA3300927D2E /* BillingCell.swift */; };
+		845377FF2554325700AFE740 /* AFNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845377FE2554325700AFE740 /* AFNetworkManager.swift */; };
 		84559155253AFA4200209EBD /* CreateBilling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84559154253AFA4100209EBD /* CreateBilling.swift */; };
 		84559159253AFB3A00209EBD /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84559158253AFB3A00209EBD /* Utility.swift */; };
 		84653A4B253E290000CBA56E /* Ex+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84653A4A253E290000CBA56E /* Ex+View.swift */; };
@@ -27,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16E71E58EC6B9867C73C0114 /* Pods_BankAccounts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BankAccounts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		284552681929B5CEFBC87C3D /* Pods-BankAccounts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAccounts.release.xcconfig"; path = "Target Support Files/Pods-BankAccounts/Pods-BankAccounts.release.xcconfig"; sourceTree = "<group>"; };
+		462D342ECF0B42F00C39F2D9 /* Pods-BankAccounts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BankAccounts.debug.xcconfig"; path = "Target Support Files/Pods-BankAccounts/Pods-BankAccounts.debug.xcconfig"; sourceTree = "<group>"; };
 		843D32AF25374C8600CB6739 /* Billing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Billing.swift; sourceTree = "<group>"; };
 		844713AA2539ECCD00A5BEFF /* NetworkHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelpers.swift; sourceTree = "<group>"; };
 		84473480253C82EF0018B440 /* BillingModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingModalViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +39,7 @@
 		844882022534FBFB003711D7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		844971E4254ADC0B0094A67F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8449AFC02533BA3300927D2E /* BillingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingCell.swift; sourceTree = "<group>"; };
+		845377FE2554325700AFE740 /* AFNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFNetworkManager.swift; sourceTree = "<group>"; };
 		84559154253AFA4100209EBD /* CreateBilling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateBilling.swift; sourceTree = "<group>"; };
 		84559158253AFB3A00209EBD /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		84653A4A253E290000CBA56E /* Ex+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+View.swift"; sourceTree = "<group>"; };
@@ -53,12 +59,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02747540A59135D5FE9EFAEB /* Pods_BankAccounts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34CA95E00B2F4FFA81ECD569 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16E71E58EC6B9867C73C0114 /* Pods_BankAccounts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6D77C91277510D7B25CEEDCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				462D342ECF0B42F00C39F2D9 /* Pods-BankAccounts.debug.xcconfig */,
+				284552681929B5CEFBC87C3D /* Pods-BankAccounts.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		843D32AE25374C6100CB6739 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +108,7 @@
 			children = (
 				844882022534FBFB003711D7 /* NetworkManager.swift */,
 				844713AA2539ECCD00A5BEFF /* NetworkHelpers.swift */,
+				845377FE2554325700AFE740 /* AFNetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -110,6 +136,8 @@
 			children = (
 				84935EF325307B10004334B4 /* BankAccounts */,
 				84935EF225307B10004334B4 /* Products */,
+				6D77C91277510D7B25CEEDCF /* Pods */,
+				34CA95E00B2F4FFA81ECD569 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84935F0525307B12004334B4 /* Build configuration list for PBXNativeTarget "BankAccounts" */;
 			buildPhases = (
+				25DDBA4892D3BFA282E028DE /* [CP] Check Pods Manifest.lock */,
 				84935EED25307B10004334B4 /* Sources */,
 				84935EEE25307B10004334B4 /* Frameworks */,
 				84935EEF25307B10004334B4 /* Resources */,
+				A5D1F4E481C21D770FE301D1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,6 +236,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25DDBA4892D3BFA282E028DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BankAccounts-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5D1F4E481C21D770FE301D1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BankAccounts/Pods-BankAccounts-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BankAccounts/Pods-BankAccounts-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BankAccounts/Pods-BankAccounts-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84935EED25307B10004334B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -218,6 +290,7 @@
 				84653A4F253E2EF800CBA56E /* BillingView.swift in Sources */,
 				84473481253C82EF0018B440 /* BillingModalViewController.swift in Sources */,
 				84559155253AFA4200209EBD /* CreateBilling.swift in Sources */,
+				845377FF2554325700AFE740 /* AFNetworkManager.swift in Sources */,
 				844971E5254ADC0B0094A67F /* Constants.swift in Sources */,
 				84653A4B253E290000CBA56E /* Ex+View.swift in Sources */,
 				84477BA92539DBD3007120CC /* AddBillingCell.swift in Sources */,
@@ -367,6 +440,7 @@
 		};
 		84935F0625307B12004334B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 462D342ECF0B42F00C39F2D9 /* Pods-BankAccounts.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -386,6 +460,7 @@
 		};
 		84935F0725307B12004334B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 284552681929B5CEFBC87C3D /* Pods-BankAccounts.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
