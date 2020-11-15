@@ -53,16 +53,23 @@ extension MainViewController  {
 
         NetworkManager.load(path: .allBilling,
                             withCompletion: success)
+
+//        AFNetworkManager.load(path: .allBilling,
+//                              successHandler: success)
     }
     
     func insertBiling(billing: CreateBilling) {
-        let success = { [unowned self] (data: Data?) in
+        let success = { [unowned self] in
             self.fetchBilings()
         }
 
         NetworkManager.insert(path: .newBilling,
-                              parameters: billing.toParameters(),
+                              parameters: billing.toStringParameters(),
                               withCompletion: success)
+//
+//        AFNetworkManager.insert(path: .newBilling,
+//                                parameters: billing.toParameters(),
+//                                withCompletion: success)
     }
 
     func openCreateBillingAlert() {

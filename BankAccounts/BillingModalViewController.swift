@@ -72,7 +72,13 @@ class BillingModalViewController: UIViewController {
                 return
             }
 
-            AFNetworkManager.delete(path: .deleteBiling, id: id, successHandler: success)
+            NetworkManager.delete(path: .deleteBiling,
+                                  id: id,
+                                  withCompletion: success)
+//            
+//            AFNetworkManager.delete(path: .deleteBiling,
+//                                    id: id,
+//                                    successHandler: success)
         }
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
