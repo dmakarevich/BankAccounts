@@ -31,8 +31,9 @@ class BillingModalViewController: UIViewController {
                 print("Failed in delete handler!")
                 return
             }
-            self.delegate?.billingModalViewControllerDidFinish(self)
+            self.openConfirmDeleteBillingAlert()
         }
+
         self.billingView.completionHandler = deleteHandler
         self.createBlurredBackgroundView()
     }
@@ -51,5 +52,34 @@ class BillingModalViewController: UIViewController {
         recognizer.numberOfTapsRequired = 1
         blurredView.addGestureRecognizer(recognizer)
         
+    }
+
+    func openConfirmDeleteBillingAlert() {
+        let success = { [weak self] in
+            guard let self = self else {
+                print("Failed in delete handler!")
+                return
+            }
+            self.delegate?.billingModalViewControllerDidFinish(self)
+        }
+
+        let alert = UIAlertController(title: "Delete",
+                                      message: "You sure want delete the billing?",
+                                      preferredStyle: .alert)
+        let deleteAction = UIAlertAction(title: "Delete",
+                                       style: .destructive) { [unowned self] action in
+            guard let id = self.billing?.id else {
+                return
+            }
+
+            AFNetworkManager.delete(path: .deleteBiling, id: id, successHandler: success)
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+
+        self.present(alert, animated: true)
     }
 }

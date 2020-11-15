@@ -47,23 +47,6 @@ class BillingView: UIView {
     }
 
     @IBAction func deleteButtonTapped(_ sender: Any) {
-        guard let id = self.id else {
-            return
-        }
-        self.deleteBiling(by: id)
-    }
-    
-    func deleteBiling(by id: Int) {
-        let success = { [unowned self] (data: Data?) in
-            guard let handler = self.completionHandler else {
-                print("Failed success closure")
-                return
-            }
-            handler()
-        }
-
-        NetworkManager.delete(path: .deleteBiling,
-                              id: id,
-                              withCompletion: success)
+        self.completionHandler?()
     }
 }
