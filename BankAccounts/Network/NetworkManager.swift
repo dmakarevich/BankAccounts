@@ -8,79 +8,84 @@
 import Foundation
 
 class NetworkManager {
-
     static func load(path: Urls, withCompletion completion: @escaping (Data?) -> ()) {
-        guard let requestUrl = URL(string: (Urls.baseURL.rawValue + path.rawValue)) else {
+        guard let url = URL(string: (Urls.baseURL.rawValue + path.rawValue)) else {
             return
         }
         let session = URLSession(configuration: .ephemeral, delegate: nil, delegateQueue: .main)
-        let task = session.dataTask(with: requestUrl, completionHandler: { (data: Data?,
-                                                                            response: URLResponse?,
-                                                                            error: Error?) -> Void in
+        let task = session.dataTask(with: url, completionHandler: { (data: Data?,
+                                                                     response: URLResponse?,
+                                                                     error: Error?) -> Void in
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
                 return
             }
             switch statusCode {
             case 200...300:
                 completion(data)
+            case 400...499:
+                print("Request error! Status code: \(statusCode) Description: \(String(describing: error))")
             default:
-                print("Request error! Status code: \(statusCode)")
+                print("Server error! Status code: \(statusCode) Description: \(String(describing: error))")
             }
         })
         task.resume()
     }
 
-    static func insert(path: Urls, parameters: String, withCompletion completion: @escaping (Data?) -> ()) {
+    static func insert(path: Urls, parameters: String, withCompletion completion: @escaping () -> ()) {
+        let postData =  parameters.data(using: .utf8)
         let url = URL(string: Urls.baseURL.rawValue + path.rawValue)
         guard let requestUrl = url else {
             fatalError()
         }
+        debugPrint(parameters)
         var request = URLRequest(url: requestUrl, timeoutInterval: Double.infinity)
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        request.addValue("keep-alive", forHTTPHeaderField: "Connection")
 
         request.httpMethod = HTTPMethods.post.rawValue
-        request.httpBody = parameters.data(using: .utf8)
-        
-        let session = URLSession(configuration: .ephemeral, delegate: nil, delegateQueue: .main)
-        let task = session.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                print("Error took place \(error)")
+        request.httpBody = postData
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
                 return
             }
-
-            if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                print("Response data string:\n \(dataString)")
+            switch statusCode {
+            case 200...300:
+                completion()
+            case 400...499:
+                print("Request error! Status code: \(statusCode) Description: \(String(describing: error))")
+            default:
+                print("Server error! Status code: \(statusCode) Description: \(String(describing: error))")
             }
-            completion(data)
         }
+
         task.resume()
     }
 
-    static func delete(path: Urls, id: Int, withCompletion completion: @escaping (Data?) -> ()) {
+    static func delete(path: Urls, id: Int, withCompletion completion: @escaping () -> ()) {
         let parameters = "id=\(id)"
         guard let url = URL(string: (Urls.baseURL.rawValue + path.rawValue)) else {
             return
         }
-        
+
         var request = URLRequest(url: url,timeoutInterval: Double.infinity)
         request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         request.addValue("keep-alive", forHTTPHeaderField: "Connection")
 
         request.httpMethod = HTTPMethods.delete.rawValue
         request.httpBody = parameters.data(using: .utf8)
-        
-        let session = URLSession(configuration: .ephemeral, delegate: nil, delegateQueue: .main)
-        let task = session.dataTask(with: request) { data, response, error in
-            if let error = error {
-                print("Error took place \(error)")
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
                 return
             }
-
-            if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                print("Response data string:\n \(dataString)")
+            switch statusCode {
+            case 200...300:
+                completion()
+            case 400...499:
+                print("Request error! Status code: \(statusCode) Description: \(String(describing: error))")
+            default:
+                print("Server error! Status code: \(statusCode) Description: \(String(describing: error))")
             }
-            completion(data)
         }
         task.resume()
     }
