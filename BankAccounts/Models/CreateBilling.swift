@@ -24,9 +24,17 @@ struct CreateBilling: Codable {
         case ownerId = "ownerID"
     }
 
-    func toParameters() -> String {
-        return CodingKeys.date.rawValue + "=\(self.date)&" +
-            CodingKeys.balance.rawValue + "=\(self.balance)&" +
-            CodingKeys.ownerId.rawValue + "=\(self.ownerId)"
+    func toStringParameters() -> String {
+        let valideDate = (self.date - date%1000)/1000
+        return CodingKeys.date.rawValue + "=\(valideDate)&" +
+               CodingKeys.balance.rawValue + "=\(self.balance)&" +
+               CodingKeys.ownerId.rawValue + "=\(self.ownerId)"
+    }
+    
+    func toParameters() -> [String: String] {
+        let valideDate = (self.date - date%1000)/1000
+        return [CodingKeys.date.rawValue: "\(valideDate)",
+                CodingKeys.balance.rawValue: "\(self.balance)",
+                CodingKeys.ownerId.rawValue: "\(self.ownerId)"]
     }
 }
