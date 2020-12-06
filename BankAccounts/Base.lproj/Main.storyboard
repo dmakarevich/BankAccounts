@@ -1,24 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h2o-e2-f3t">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Main View Controller-->
+        <scene sceneID="ZYW-cY-5Bq">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="h2o-e2-f3t" customClass="MainViewController" customModule="BankAccounts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vF4-9c-owv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="always" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ISi-oq-VPm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="180"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="nfi-eC-jjw"/>
+                                </constraints>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="20" minimumInteritemSpacing="15" id="vdm-E4-3pa">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="16" minY="20" maxX="16" maxY="20"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BillingCell" id="hl2-K2-XN7" customClass="BillingCell" customModule="BankAccounts" customModuleProvider="target">
+                                        <rect key="frame" x="31" y="20" width="322" height="172"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hpI-i1-5c7">
+                                            <rect key="frame" x="0.0" y="0.0" width="322" height="172"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbR-mq-IHM">
+                                                    <rect key="frame" x="8" y="16" width="306" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sY9-P1-hVa">
+                                                    <rect key="frame" x="8" y="87" width="306" height="77"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="8fR-d7-bgn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="sY9-P1-hVa" secondAttribute="bottom" constant="8" id="03s-FG-X9N"/>
+                                                <constraint firstItem="sY9-P1-hVa" firstAttribute="leading" secondItem="hpI-i1-5c7" secondAttribute="leading" constant="8" id="Eoi-oG-Z7p"/>
+                                                <constraint firstAttribute="trailing" secondItem="IbR-mq-IHM" secondAttribute="trailing" constant="8" id="FUt-Oi-MMx"/>
+                                                <constraint firstItem="IbR-mq-IHM" firstAttribute="top" secondItem="hpI-i1-5c7" secondAttribute="top" constant="16" id="eX0-ZI-OER"/>
+                                                <constraint firstAttribute="trailing" secondItem="sY9-P1-hVa" secondAttribute="trailing" constant="8" id="iSY-ga-CPO"/>
+                                                <constraint firstItem="sY9-P1-hVa" firstAttribute="top" secondItem="IbR-mq-IHM" secondAttribute="bottom" constant="50" id="lrw-6H-7Cs"/>
+                                                <constraint firstItem="IbR-mq-IHM" firstAttribute="leading" secondItem="hpI-i1-5c7" secondAttribute="leading" constant="8" id="zgP-z7-cgA"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <size key="customSize" width="322" height="172"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="balanceLabel" destination="IbR-mq-IHM" id="mei-bB-w6F"/>
+                                            <outlet property="ownerLabel" destination="sY9-P1-hVa" id="Ghk-Gp-2Pp"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddBillingCell" id="1Dm-Cn-rxQ" customClass="AddBillingCell" customModule="BankAccounts" customModuleProvider="target">
+                                        <rect key="frame" x="368" y="20" width="243" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="uTr-ME-Jpj">
+                                            <rect key="frame" x="0.0" y="0.0" width="243" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Add" translatesAutoresizingMaskIntoConstraints="NO" id="7E6-Xe-qPA">
+                                                    <rect key="frame" x="79.5" y="28" width="84" height="84"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="84" id="EG2-XZ-DNx"/>
+                                                        <constraint firstAttribute="height" constant="84" id="QJL-Jg-fbd"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7E6-Xe-qPA" firstAttribute="centerX" secondItem="uTr-ME-Jpj" secondAttribute="centerX" id="Zts-eV-t3N"/>
+                                                <constraint firstItem="7E6-Xe-qPA" firstAttribute="centerY" secondItem="uTr-ME-Jpj" secondAttribute="centerY" id="lM9-hy-Rj4"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <size key="customSize" width="243" height="140"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VfO-ac-Rs5"/>
+                        <color key="backgroundColor" red="1" green="0.74757934169999996" blue="0.66716235710000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ISi-oq-VPm" firstAttribute="trailing" secondItem="VfO-ac-Rs5" secondAttribute="trailing" id="BG6-pP-ya7"/>
+                            <constraint firstItem="ISi-oq-VPm" firstAttribute="leading" secondItem="VfO-ac-Rs5" secondAttribute="leading" id="QNV-3F-sgi"/>
+                            <constraint firstItem="ISi-oq-VPm" firstAttribute="top" secondItem="VfO-ac-Rs5" secondAttribute="top" id="xr4-Gp-NvI"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="PbK-bF-yj5"/>
+                    <connections>
+                        <outlet property="collectionView" destination="ISi-oq-VPm" id="XeL-95-Lzw"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vYe-fH-ZHT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-713.04347826086962" y="95.758928571428569"/>
+        </scene>
+        <!--Billing Modal View Controller-->
+        <scene sceneID="Ygn-bB-nF0">
+            <objects>
+                <viewController storyboardIdentifier="BillingModalViewController" id="Umi-ug-2FS" customClass="BillingModalViewController" customModule="BankAccounts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="Bni-P2-7M6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kvf-nW-iPb" customClass="BillingView" customModule="BankAccounts" customModuleProvider="target">
+                                <rect key="frame" x="20" y="370" width="374" height="166.5"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D84-PQ-EYb"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kvf-nW-iPb" firstAttribute="leading" secondItem="D84-PQ-EYb" secondAttribute="leading" constant="20" id="1zE-81-Xd4"/>
+                            <constraint firstItem="Kvf-nW-iPb" firstAttribute="centerY" secondItem="D84-PQ-EYb" secondAttribute="centerY" id="Jns-Lw-OjR"/>
+                            <constraint firstItem="Kvf-nW-iPb" firstAttribute="centerX" secondItem="D84-PQ-EYb" secondAttribute="centerX" id="ZUo-LC-dn9"/>
+                            <constraint firstItem="D84-PQ-EYb" firstAttribute="trailing" secondItem="Kvf-nW-iPb" secondAttribute="trailing" constant="20" id="xnp-Nx-oj8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="billingView" destination="Kvf-nW-iPb" id="H3L-le-pVV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2cE-tY-y5t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278.26086956521743" y="95.758928571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Add" width="80" height="80"/>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
